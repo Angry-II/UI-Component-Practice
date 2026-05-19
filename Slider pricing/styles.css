@@ -1,0 +1,108 @@
+*{
+  box-sizing: border-box;
+}
+/*========== card */
+.value-card__title{
+  text-align: center;
+  font-size:2rem;
+  font-family: Sans-Serif;
+}
+.value-card__body{
+  display: grid;
+  place-items: center;
+}
+.value-card{
+  width:fit-content;
+  border-radius: 5px;
+  border: 1px solid black;
+  width:300px;
+  height:270px;
+  display: flex;
+  flex-direction: column;
+}
+.value-card__pricing .value-card__price{
+  font-size: 3rem;
+  font-family: Sans-Serif;
+  font-weight: 600;
+}
+.value-card__unit--currency{
+  font-size:0.875rem;
+}
+/* ============= slider  ================*/
+.value-card__slider{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  width:80%;
+}
+.value-card__track{
+  width:110%;
+  position: relative;
+}
+.value-card__slider--icon{
+  margin-top:20px;
+}
+#slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+  margin-top:20px;
+}
+/* Track */
+#slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  border-radius: 999px;
+}
+/* Thumb */
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;   
+  margin-top: -7px; 
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  transition: 0.2s;
+}
+/* Hover */
+#slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+/* Active */
+#slider:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+/* ============= slider tooltip =============*/
+.value-card__slider--tooltip{
+  position: absolute;
+  top: 140%;
+  left:0;
+  padding: 4px 10px;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: Sans-Serif;
+}
+.value-card__slider--tooltip::after{
+  content:'';
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #111827;
+}

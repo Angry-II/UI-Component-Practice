@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <button id="pop-up">Pay now</button>
+      <div id="overlay"></div>
+      <div id="pop-window">
+        <div class="pop-up__heading">
+          <h2 class="heading__text">Invoice</h2>
+          <div class="heading__close">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M5 5 L19 19 M19 5 L5 19"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pop-up__container">
+          <div class="container__text">
+            <div class="basic-invoice-info">
+              <div id="date">27th, April 2026</div>
+              <div id="bill-num">No. 0313528</div>
+            </div>
+            <div class="text__heading text__border">
+              <h3 class="order-info">Bill to</h3>
+              <div class="customer-name">Mr. Truong Vu Mai</div>
+              <div class="contact-num">Phone: +843265844136</div>
+              <div class="contact-email">Email: vutruong1995@gmail.com</div>
+            </div>
+            <div class="text__info text__border">
+              <h3 class="info-heading">Voyage Information</h3>
+              <div class="voyage">Route: Hanoi to HCMC</div>
+              <div class="day-of-depature">Departure Date: 27/04/2026</div>
+              <div class="time-depature">Departure Time: 21:30</div>
+              <div class="type-op-seat">Seat Type: Economy</div>
+              <div class="number-of-ticket">Number of Tickets: 1</div>
+            </div>
+            <div class="text__payment text__border">
+              <h3 class="payment-heading">Payment Details</h3>
+              <div class="basic-cost cost-row">
+                <span class="cost-type">Base fare:</span>
+                <span class="price">48 USD</span>
+              </div>
+              <div class="reservation-cost cost-row">
+                <span class="cost-type">Reservation cost:</span>
+                <span class="price">1.5 USD</span>
+              </div>
+              <div class="seat-upgrading-cost cost-row">
+                <span class="cost-type">Seat upgrading cost</span>
+                <span class="price">0 USD</span>
+              </div>
+              <div class="insurance cost-row">
+                <span class="cost-type">Passenger insurance:</span>
+                <span class="price">0.5 USD</span>
+              </div>
+              <div class="additional-cost cost-row">
+                <span class="cost-type">Additional cost:</span>
+                <span class="price">0 USD</span>
+              </div>
+              <div class="total-cost cost-row">
+                <span class="cost-type">Total:</span>
+                <span class="price">50 USD</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <button class="pop-up__payment">Pay Now</button>
+      </div>
+    </div>
+      <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+body{
+ box-sizing: border-box
+}
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+#pop-up{
+  height: 4rem;
+  width:13rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-radius:5px;
+  border:none;
+  background:#4ecedc;
+  color:white;
+  transition: background 0.2s;
+}
+#pop-up:hover{
+  background:#3fbcc9;
+}
+#overlay{
+  inset: 0;
+  background:rgba(128, 128, 128,0.2);
+  display: none;
+  position: fixed;
+  z-index: 999;
+}
+#pop-window{
+  width: 35rem;
+  background:#fff;
+  box-shadow: 2px 1px 6px 1px #757575;
+  font-family: sans-serif;
+  padding:10px;
+  display:none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius:10px;
+}
+#pop-window h2 {
+  color:#38d9d3;
+}
+/* ============= Pop up ==============*/
+#pop-window h3{
+  margin:10px 0;
+}
+.pop-up__heading{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin:15px 20px;
+}
+.heading__text{
+  grid-column: 2;
+  margin: 0;
+  font-size: 4rem;
+  text-align: center;
+}
+.heading__close{
+  width:35px;
+  height:35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  transition: background 0.2s;
+  border-radius: 50%;
+  grid-column: 3;
+  justify-self: end;
+}
+.heading__close:hover{
+  background:#e3e3e3;
+  
+}
+.container__text{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:25px
+}
+.basic-invoice-info{
+  font-size: 0.75rem;
+  margin-left: 10px;
+}
+.text__payment, .basic-invoice-info{
+  grid-column: 1 / -1;
+}
+.cost-row{
+  display: flex;
+  justify-content: space-between;
+}
+.text__heading, .text__info, .text__payment {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+}
+.total-cost {
+  font-size:1.3rem;
+  font-weight: 700;
+  margin-top:20px;
+  position: relative;
+  margin-bottom:10px;
+}
+.total-cost::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    top: -10px;
+}
+.pop-up__payment{
+  width:9rem;
+  height:3rem;
+  border-radius: 5px;
+  background:#4ecedc;
+  color:white;
+  border:none;
+  font-size:1.2rem;
+  cursor:pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin: 20px auto 10px;
+  display: block;
+}
+.pop-up__payment:hover{
+  background:#3fbcc9;
+}
+/* ========= Active =============*/
+#overlay.active, #pop-window.active{
+  display:block;
+}
